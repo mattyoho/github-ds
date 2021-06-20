@@ -2,8 +2,8 @@ require_relative "kv/config"
 require_relative "result"
 require_relative "sql"
 
-# GitHub::KV is a key/value data store backed by MySQL (however, the backing
-# store used should be regarded as an implementation detail).
+# GitHub::KV is a key/value data store backed by SQL, with support for MySQL
+# and PostgreSQL.
 #
 # Usage tips:
 #
