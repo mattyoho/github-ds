@@ -6,9 +6,14 @@ rvm:
   - 2.5
   - 2.6
   - 2.7
+before_script:
+  - psql -c 'create database github_ds_test;' -U postgres
 script: bundle exec rake
 env:
   - RAILS_VERSION=6.0.3.5
   - RAILS_VERSION=5.2.0
+  - TARGET_DATABASE=mysql
+  - TARGET_DATABASE=postgresql
 services:
   - mysql
+  - postgresql
